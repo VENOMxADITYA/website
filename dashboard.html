@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - EduLink</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>EduLink</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
+                <li><a href="study-rooms.html" class="nav-link">Study Rooms</a></li>
+                <li><a href="buddies.html" class="nav-link">Find Buddies</a></li>
+                <li><a href="timetable.html" class="nav-link">Timetable</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <main class="dashboard">
+        <div class="container">
+            <!-- Dashboard Header -->
+            <div class="dashboard-header">
+                <h1><i class="fas fa-tachometer-alt"></i> Welcome back, Prerna! 👋</h1>
+                <p>Here's your productivity overview for today. Keep up the excellent work!</p>
+                <div class="dashboard-stats">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">7</span>
+                            <span class="stat-label">Day Streak</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">4.5h</span>
+                            <span class="stat-label">Today</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">89%</span>
+                            <span class="stat-label">Efficiency</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Grid -->
+            <div class="dashboard-grid">
+                <!-- To-Do List Card -->
+                <div class="dashboard-card todo-card">
+                    <h3><i class="fas fa-tasks"></i> Today's Tasks</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 60%"></div>
+                        <span class="progress-text">3 of 5 completed</span>
+                    </div>
+                    <div class="todo-list">
+                        <div class="todo-item completed">
+                            <input type="checkbox" id="task1" checked>
+                            <label for="task1">Complete Math homework - Chapter 5 (Calculus)</label>
+                            <div class="todo-priority high"></div>
+                        </div>
+                        <div class="todo-item completed">
+                            <input type="checkbox" id="task2" checked>
+                            <label for="task2">Review Physics notes - Wave Motion</label>
+                            <div class="todo-priority medium"></div>
+                        </div>
+                        <div class="todo-item completed">
+                            <input type="checkbox" id="task3" checked>
+                            <label for="task3">Read English Literature - Macbeth Act 3</label>
+                            <div class="todo-priority medium"></div>
+                        </div>
+                        <div class="todo-item">
+                            <input type="checkbox" id="task4">
+                            <label for="task4">Prepare Chemistry Lab Report - Organic Reactions</label>
+                            <div class="todo-priority high"></div>
+                        </div>
+                        <div class="todo-item">
+                            <input type="checkbox" id="task5">
+                            <label for="task5">Practice coding - Data Structures</label>
+                            <div class="todo-priority low"></div>
+                        </div>
+                    </div>
+                    <button class="add-task-btn" onclick="addNewTask()">
+                        <i class="fas fa-plus"></i> Add Task
+                    </button>
+                </div>
+
+                <!-- Study Timer Card -->
+                <div class="dashboard-card timer-card">
+                    <h3><i class="fas fa-stopwatch"></i> Focus Timer</h3>
+                    <div class="timer-mode">
+                        <button class="timer-mode-btn active" data-mode="pomodoro">Pomodoro</button>
+                        <button class="timer-mode-btn" data-mode="short">Short Break</button>
+                        <button class="timer-mode-btn" data-mode="long">Long Break</button>
+                    </div>
+                    <div class="timer-display" id="timer-display">25:00</div>
+                    <div class="timer-progress">
+                        <svg class="timer-circle" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="45" stroke="var(--border-color)" stroke-width="8" fill="none"/>
+                            <circle cx="50" cy="50" r="45" stroke="var(--primary)" stroke-width="8" fill="none" 
+                                    stroke-dasharray="283" stroke-dashoffset="283" class="timer-progress-circle"/>
+                        </svg>
+                    </div>
+                    <div class="timer-controls">
+                        <button class="btn-small btn-start" onclick="startTimer()">
+                            <i class="fas fa-play"></i> Start
+                        </button>
+                        <button class="btn-small btn-pause" onclick="pauseTimer()">
+                            <i class="fas fa-pause"></i> Pause
+                        </button>
+                        <button class="btn-small btn-reset" onclick="resetTimer()">
+                            <i class="fas fa-refresh"></i> Reset
+                        </button>
+                    </div>
+                    <div class="session-info">
+                        <p>Session 3 of 4 • Focus on Mathematics</p>
+                    </div>
+                </div>
+
+                <!-- Quick Stats Card -->
+                <div class="dashboard-card stats-card">
+                    <h3><i class="fas fa-chart-bar"></i> Weekly Overview</h3>
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <div class="stat-icon-small">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <div class="stat-details">
+                                <span class="stat-value">47h</span>
+                                <span class="stat-desc">Study Hours</span>
+                                <span class="stat-change positive">+12% from last week</span>
+                            </div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-icon-small">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="stat-details">
+                                <span class="stat-value">28</span>
+                                <span class="stat-desc">Tasks Done</span>
+                                <span class="stat-change positive">+5 from last week</span>
+                            </div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-icon-small">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-details">
+                                <span class="stat-value">3</span>
+                                <span class="stat-desc">Study Buddies</span>
+                                <span class="stat-change neutral">Active connections</span>
+                            </div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-icon-small">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="stat-details">
+                                <span class="stat-value">12</span>
+                                <span class="stat-desc">Room Sessions</span>
+                                <span class="stat-change positive">+3 this week</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upcoming Schedule Card -->
+                <div class="dashboard-card schedule-card">
+                    <h3><i class="fas fa-calendar-check"></i> Today's Schedule</h3>
+                    <div class="schedule-list">
+                        <div class="schedule-item current">
+                            <div class="schedule-time">
+                                <span class="time">2:30 PM</span>
+                                <span class="duration">1h</span>
+                            </div>
+                            <div class="schedule-content">
+                                <h4>Mathematics - Calculus</h4>
+                                <p>Integration and Differentiation</p>
+                                <div class="schedule-tags">
+                                    <span class="tag math">CBSE</span>
+                                    <span class="tag">Room 201</span>
+                                </div>
+                            </div>
+                            <div class="schedule-status">
+                                <div class="status-indicator active"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="schedule-item">
+                            <div class="schedule-time">
+                                <span class="time">4:00 PM</span>
+                                <span class="duration">1h 30m</span>
+                            </div>
+                            <div class="schedule-content">
+                                <h4>Physics Lab - Wave Motion</h4>
+                                <p>Practical experiments and observations</p>
+                                <div class="schedule-tags">
+                                    <span class="tag science">Lab 3</span>
+                                    <span class="tag">Group Work</span>
+                                </div>
+                            </div>
+                            <div class="schedule-status">
+                                <div class="status-indicator upcoming"></div>
+                            </div>
+                        </div>
+
+                        <div class="schedule-item">
+                            <div class="schedule-time">
+                                <span class="time">6:00 PM</span>
+                                <span class="duration">2h</span>
+                            </div>
+                            <div class="schedule-content">
+                                <h4>Study Group - Chemistry</h4>
+                                <p>Organic Chemistry discussion with Raj & Priya</p>
+                                <div class="schedule-tags">
+                                    <span class="tag science">Virtual</span>
+                                    <span class="tag">3 Members</span>
+                                </div>
+                            </div>
+                            <div class="schedule-status">
+                                <div class="status-indicator upcoming"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions Card -->
+                <div class="dashboard-card actions-card">
+                    <h3><i class="fas fa-rocket"></i> Quick Actions</h3>
+                    <div class="action-grid">
+                        <button class="action-btn" onclick="joinStudyRoom()">
+                            <div class="action-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="action-text">
+                                <span class="action-title">Join Study Room</span>
+                                <span class="action-desc">5 active rooms</span>
+                            </div>
+                        </button>
+                        
+                        <button class="action-btn" onclick="findBuddy()">
+                            <div class="action-icon">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <div class="action-text">
+                                <span class="action-title">Find Study Buddy</span>
+                                <span class="action-desc">12 online now</span>
+                            </div>
+                        </button>
+                        
+                        <button class="action-btn" onclick="playFocusMusic()">
+                            <div class="action-icon">
+                                <i class="fas fa-music"></i>
+                            </div>
+                            <div class="action-text">
+                                <span class="action-title">Focus Music</span>
+                                <span class="action-desc">Lo-fi & Classical</span>
+                            </div>
+                        </button>
+                        
+                        <button class="action-btn" onclick="viewProgress()">
+                            <div class="action-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="action-text">
+                                <span class="action-title">View Progress</span>
+                                <span class="action-desc">Detailed analytics</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Motivational Quote Card -->
+                <div class="dashboard-card quote-card">
+                    <h3><i class="fas fa-quote-left"></i> Daily Inspiration</h3>
+                    <div class="quote-content">
+                        <blockquote id="daily-quote">
+                            "The expert in anything was once a beginner. Keep learning, keep growing!"
+                        </blockquote>
+                        <cite id="quote-author">- Helen Hayes</cite>
+                    </div>
+                    <button class="refresh-quote" onclick="refreshQuote()">
+                        <i class="fas fa-refresh"></i>
+                    </button>
+                </div>
+
+                <!-- Recent Activity Card -->
+                <div class="dashboard-card activity-card">
+                    <h3><i class="fas fa-history"></i> Recent Activity</h3>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon completed">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p><strong>Completed</strong> Math homework - Chapter 5</p>
+                                <span class="activity-time">2 hours ago</span>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-icon study">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p><strong>Joined</strong> Physics study room with 8 students</p>
+                                <span class="activity-time">4 hours ago</span>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-icon buddy">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p><strong>Connected</strong> with Aarav (Mathematics buddy)</p>
+                                <span class="activity-time">Yesterday</span>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-icon achievement">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p><strong>Achieved</strong> 7-day study streak! 🔥</p>
+                                <span class="activity-time">Yesterday</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html> 

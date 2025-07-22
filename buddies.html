@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Study Buddies - EduLink</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>EduLink</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="study-rooms.html" class="nav-link">Study Rooms</a></li>
+                <li><a href="buddies.html" class="nav-link active">Find Buddies</a></li>
+                <li><a href="timetable.html" class="nav-link">Timetable</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Study Buddies Content -->
+    <main class="dashboard">
+        <div class="container">
+            <!-- Header -->
+            <div class="dashboard-header">
+                <h1><i class="fas fa-users"></i> Find Study Buddies</h1>
+                <p>Connect with like-minded students who share your academic goals. Build lasting study partnerships!</p>
+            </div>
+
+            <!-- Buddy Matching Grid -->
+            <div class="dashboard-grid">
+                <!-- Recommended Buddies -->
+                <div class="dashboard-card buddy-recommendations" style="grid-column: span 2;">
+                    <h3><i class="fas fa-star"></i> Recommended for You</h3>
+                    <div class="buddy-grid">
+                        
+                        <!-- Buddy 1 -->
+                        <div class="buddy-card">
+                            <div class="buddy-avatar">
+                                <div class="avatar-circle" style="background: linear-gradient(135deg, #4f46e5, #7c3aed);">
+                                    A
+                                </div>
+                                <div class="status-indicator online"></div>
+                            </div>
+                            <div class="buddy-info">
+                                <h4>Aarav Sharma</h4>
+                                <p class="buddy-details">CBSE Class 12 • Mumbai</p>
+                                <div class="buddy-subjects">
+                                    <span class="subject-tag math">Mathematics</span>
+                                    <span class="subject-tag science">Physics</span>
+                                </div>
+                                <p class="buddy-note">Preparing for JEE Main • Available evenings</p>
+                                <div class="compatibility-score">
+                                    <span class="score-label">Compatibility:</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 95%"></div>
+                                    </div>
+                                    <span class="score-text">95%</span>
+                                </div>
+                            </div>
+                            <div class="buddy-actions">
+                                <button class="btn btn-primary btn-small">Connect</button>
+                                <button class="btn btn-secondary btn-small">View Profile</button>
+                            </div>
+                        </div>
+
+                        <!-- Buddy 2 -->
+                        <div class="buddy-card">
+                            <div class="buddy-avatar">
+                                <div class="avatar-circle" style="background: linear-gradient(135deg, #10b981, #059669);">
+                                    P
+                                </div>
+                                <div class="status-indicator online"></div>
+                            </div>
+                            <div class="buddy-info">
+                                <h4>Priya Patel</h4>
+                                <p class="buddy-details">CBSE Class 11 • Delhi</p>
+                                <div class="buddy-subjects">
+                                    <span class="subject-tag science">Chemistry</span>
+                                    <span class="subject-tag science">Biology</span>
+                                </div>
+                                <p class="buddy-note">Preparing for NEET • Morning study sessions</p>
+                                <div class="compatibility-score">
+                                    <span class="score-label">Compatibility:</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 88%"></div>
+                                    </div>
+                                    <span class="score-text">88%</span>
+                                </div>
+                            </div>
+                            <div class="buddy-actions">
+                                <button class="btn btn-primary btn-small">Connect</button>
+                                <button class="btn btn-secondary btn-small">View Profile</button>
+                            </div>
+                        </div>
+
+                        <!-- Buddy 3 -->
+                        <div class="buddy-card">
+                            <div class="buddy-avatar">
+                                <div class="avatar-circle" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+                                    R
+                                </div>
+                                <div class="status-indicator away"></div>
+                            </div>
+                            <div class="buddy-info">
+                                <h4>Raj Kumar</h4>
+                                <p class="buddy-details">State Board Class 12 • Bangalore</p>
+                                <div class="buddy-subjects">
+                                    <span class="subject-tag english">English</span>
+                                    <span class="subject-tag history">History</span>
+                                </div>
+                                <p class="buddy-note">Preparing for board exams • Flexible timing</p>
+                                <div class="compatibility-score">
+                                    <span class="score-label">Compatibility:</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 82%"></div>
+                                    </div>
+                                    <span class="score-text">82%</span>
+                                </div>
+                            </div>
+                            <div class="buddy-actions">
+                                <button class="btn btn-primary btn-small">Connect</button>
+                                <button class="btn btn-secondary btn-small">View Profile</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Search Filters -->
+                <div class="dashboard-card">
+                    <h3><i class="fas fa-filter"></i> Find Specific Buddies</h3>
+                    <form class="buddy-search-form">
+                        <div class="form-group">
+                            <label for="subject-filter">Subject</label>
+                            <select id="subject-filter">
+                                <option>All Subjects</option>
+                                <option>Mathematics</option>
+                                <option>Physics</option>
+                                <option>Chemistry</option>
+                                <option>Biology</option>
+                                <option>English</option>
+                                <option>History</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="board-filter">Educational Board</label>
+                            <select id="board-filter">
+                                <option>All Boards</option>
+                                <option>CBSE</option>
+                                <option>ICSE</option>
+                                <option>State Board</option>
+                                <option>IB</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="class-filter">Class</label>
+                            <select id="class-filter">
+                                <option>All Classes</option>
+                                <option>Class 9</option>
+                                <option>Class 10</option>
+                                <option>Class 11</option>
+                                <option>Class 12</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="time-filter">Study Time Preference</label>
+                            <select id="time-filter">
+                                <option>Any Time</option>
+                                <option>Morning (6 AM - 12 PM)</option>
+                                <option>Afternoon (12 PM - 6 PM)</option>
+                                <option>Evening (6 PM - 10 PM)</option>
+                                <option>Late Night (10 PM - 2 AM)</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-search"></i> Search Buddies
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Your Connections -->
+                <div class="dashboard-card">
+                    <h3><i class="fas fa-user-friends"></i> Your Study Buddies</h3>
+                    <div class="connections-list">
+                        <div class="connection-item">
+                            <div class="connection-avatar">
+                                <div class="avatar-circle" style="background: linear-gradient(135deg, #ec4899, #be185d);">S</div>
+                                <div class="status-indicator online"></div>
+                            </div>
+                            <div class="connection-info">
+                                <h4>Sneha Reddy</h4>
+                                <p>Chemistry • Online now</p>
+                                <div class="connection-stats">
+                                    <span><i class="fas fa-video"></i> 12 sessions</span>
+                                </div>
+                            </div>
+                            <div class="connection-actions">
+                                <button class="btn btn-primary btn-small">
+                                    <i class="fas fa-video"></i>
+                                </button>
+                                <button class="btn btn-secondary btn-small">
+                                    <i class="fas fa-comment"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="connection-item">
+                            <div class="connection-avatar">
+                                <div class="avatar-circle" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8);">V</div>
+                                <div class="status-indicator away"></div>
+                            </div>
+                            <div class="connection-info">
+                                <h4>Vikram Singh</h4>
+                                <p>Mathematics • Last seen 2h ago</p>
+                                <div class="connection-stats">
+                                    <span><i class="fas fa-clock"></i> 8 sessions</span>
+                                </div>
+                            </div>
+                            <div class="connection-actions">
+                                <button class="btn btn-secondary btn-small">
+                                    <i class="fas fa-comment"></i>
+                                </button>
+                                <button class="btn btn-secondary btn-small">
+                                    <i class="fas fa-calendar"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="connection-item">
+                            <div class="connection-avatar">
+                                <div class="avatar-circle" style="background: linear-gradient(135deg, #06b6d4, #0891b2);">M</div>
+                                <div class="status-indicator online"></div>
+                            </div>
+                            <div class="connection-info">
+                                <h4>Meera Joshi</h4>
+                                <p>Physics • Online now</p>
+                                <div class="connection-stats">
+                                    <span><i class="fas fa-fire"></i> 15 sessions</span>
+                                </div>
+                            </div>
+                            <div class="connection-actions">
+                                <button class="btn btn-primary btn-small">
+                                    <i class="fas fa-video"></i>
+                                </button>
+                                <button class="btn btn-secondary btn-small">
+                                    <i class="fas fa-comment"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Study Group Invites -->
+                <div class="dashboard-card">
+                    <h3><i class="fas fa-envelope"></i> Group Invites</h3>
+                    <div class="invites-list">
+                        <div class="invite-card pending">
+                            <div class="invite-header">
+                                <h4>JEE Mathematics Group</h4>
+                                <span class="invite-badge">New</span>
+                            </div>
+                            <div class="invite-details">
+                                <p><i class="fas fa-users"></i> 5 members • CBSE Class 12</p>
+                                <p><i class="fas fa-book"></i> Focused on solving previous year JEE questions</p>
+                                <p><i class="fas fa-user"></i> Invited by: Aarav Sharma</p>
+                            </div>
+                            <div class="invite-actions">
+                                <button class="btn btn-primary btn-small">Accept</button>
+                                <button class="btn btn-secondary btn-small">Decline</button>
+                            </div>
+                        </div>
+
+                        <div class="invite-card pending">
+                            <div class="invite-header">
+                                <h4>NEET Biology Study Circle</h4>
+                                <span class="invite-badge">New</span>
+                            </div>
+                            <div class="invite-details">
+                                <p><i class="fas fa-users"></i> 8 members • Various boards</p>
+                                <p><i class="fas fa-microscope"></i> Daily discussions on NCERT topics</p>
+                                <p><i class="fas fa-user"></i> Invited by: Priya Patel</p>
+                            </div>
+                            <div class="invite-actions">
+                                <button class="btn btn-primary btn-small">Accept</button>
+                                <button class="btn btn-secondary btn-small">Decline</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Study Stats -->
+                <div class="dashboard-card">
+                    <h3><i class="fas fa-chart-bar"></i> Your Study Network</h3>
+                    <div class="network-stats">
+                        <div class="stat-row">
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="fas fa-user-plus"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <span class="stat-number">3</span>
+                                    <span class="stat-label">Active Buddies</span>
+                                </div>
+                            </div>
+                            
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="fas fa-video"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <span class="stat-number">35</span>
+                                    <span class="stat-label">Study Sessions</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-row">
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <span class="stat-number">42h</span>
+                                    <span class="stat-label">Collaborative Time</span>
+                                </div>
+                            </div>
+                            
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <span class="stat-number">12</span>
+                                    <span class="stat-label">Goals Achieved</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tips for Better Connections -->
+                <div class="dashboard-card">
+                    <h3><i class="fas fa-lightbulb"></i> Connection Tips</h3>
+                    <div class="tips-list">
+                        <div class="tip-item">
+                            <div class="tip-icon">
+                                <i class="fas fa-user-edit"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h4>Complete Your Profile</h4>
+                                <p>Add study preferences, goals, and available times for better matches</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-item">
+                            <div class="tip-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h4>Be Active in Study Rooms</h4>
+                                <p>Participate in group sessions to meet compatible study partners</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-item">
+                            <div class="tip-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h4>Maintain Regular Sessions</h4>
+                                <p>Consistency builds stronger study partnerships and better results</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-item">
+                            <div class="tip-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h4>Respect Others' Time</h4>
+                                <p>Be punctual and considerate of your study buddies' schedules</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html> 

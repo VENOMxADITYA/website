@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Timetable - EduLink</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>EduLink</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="study-rooms.html" class="nav-link">Study Rooms</a></li>
+                <li><a href="buddies.html" class="nav-link">Find Buddies</a></li>
+                <li><a href="timetable.html" class="nav-link active">Timetable</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Timetable Content -->
+    <main class="dashboard">
+        <div class="container">
+            <!-- Header -->
+            <div class="dashboard-header">
+                <h1><i class="fas fa-calendar-alt"></i> Smart Timetable</h1>
+                <p>Organize your study schedule efficiently. View weekly classes and plan your study sessions.</p>
+                <div class="timetable-controls">
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-chevron-left"></i> Previous Week
+                    </button>
+                    <span class="current-week">Week of December 16-22, 2024</span>
+                    <button class="btn btn-secondary">
+                        Next Week <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Timetable Container -->
+            <div class="timetable">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                            <th>Saturday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time-slot"><strong>8:00 - 9:00 AM</strong></td>
+                            <td class="class-slot">
+                                <div class="class-item">
+                                    <span class="subject-tag math">Mathematics</span>
+                                    <div class="class-details">
+                                        <small>Algebra & Functions</small>
+                                        <div class="class-meta">
+                                            <span><i class="fas fa-map-marker-alt"></i> Room 201</span>
+                                            <span><i class="fas fa-user"></i> Mr. Sharma</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="class-slot">
+                                <div class="class-item">
+                                    <span class="subject-tag science">Physics</span>
+                                    <div class="class-details">
+                                        <small>Mechanics & Motion</small>
+                                        <div class="class-meta">
+                                            <span><i class="fas fa-map-marker-alt"></i> Lab 2</span>
+                                            <span><i class="fas fa-user"></i> Dr. Patel</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="class-slot">
+                                <div class="class-item">
+                                    <span class="subject-tag math">Mathematics</span>
+                                    <div class="class-details">
+                                        <small>Geometry</small>
+                                        <div class="class-meta">
+                                            <span><i class="fas fa-map-marker-alt"></i> Room 201</span>
+                                            <span><i class="fas fa-user"></i> Mr. Sharma</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="class-slot">
+                                <div class="class-item">
+                                    <span class="subject-tag science">Chemistry</span>
+                                    <div class="class-details">
+                                        <small>Organic Chemistry</small>
+                                        <div class="class-meta">
+                                            <span><i class="fas fa-map-marker-alt"></i> Lab 1</span>
+                                            <span><i class="fas fa-user"></i> Ms. Reddy</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="class-slot">
+                                <div class="class-item">
+                                    <span class="subject-tag math">Mathematics</span>
+                                    <div class="class-details">
+                                        <small>Calculus</small>
+                                        <div class="class-meta">
+                                            <span><i class="fas fa-map-marker-alt"></i> Room 201</span>
+                                            <span><i class="fas fa-user"></i> Mr. Sharma</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="class-slot">
+                                <div class="class-item">
+                                    <span class="subject-tag english">English</span>
+                                    <div class="class-details">
+                                        <small>Literature</small>
+                                        <div class="class-meta">
+                                            <span><i class="fas fa-map-marker-alt"></i> Room 105</span>
+                                            <span><i class="fas fa-user"></i> Mrs. Joshi</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time-slot"><strong>9:15 - 10:15 AM</strong></td>
+                            <td class="class-slot">
+                                <div class="class-item">
+                                    <span class="subject-tag science">Physics</span>
+                                    <div class="class-details">
+                                        <small>Wave Motion</small>
+                                        <div class="class-meta">
+                                            <span><i class="fas fa-map-marker-alt"></i> Lab 2</span>
+                                            <span><i class="fas fa-user"></i> Dr. Patel</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="class-slot">
+                                <div class="class-item">
+                                    <span class="subject-tag science">Chemistry</span>
+                                    <div class="class-details">
+                                        <small>Inorganic Chemistry</small>
+                                        <div class="class-meta">
+                                            <span><i class="fas fa-map-marker-alt"></i> Lab 1</span>
+                                            <span><i class="fas fa-user"></i> Ms. Reddy</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="class-slot">
+                                <div class="class-item">
+                                    <span class="subject-tag science">Physics</span>
+                                    <div class="class-details">
+                                        <small>Optics</small>
+                                        <div class="class-meta">
+                                            <span><i class="fas fa-map-marker-alt"></i> Lab 2</span>
+                                            <span><i class="fas fa-user"></i> Dr. Patel</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="class-slot">
+                                <div class="class-item">
+                                    <span class="subject-tag science">Biology</span>
+                                    <div class="class-details">
+                                        <small>Cell Biology</small>
+                                        <div class="class-meta">
+                                            <span><i class="fas fa-map-marker-alt"></i> Lab 3</span>
+                                            <span><i class="fas fa-user"></i> Dr. Kumar</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="class-slot">
+                                <div class="class-item">
+                                    <span class="subject-tag science">Physics</span>
+                                    <div class="class-details">
+                                        <small>Modern Physics</small>
+                                        <div class="class-meta">
+                                            <span><i class="fas fa-map-marker-alt"></i> Lab 2</span>
+                                            <span><i class="fas fa-user"></i> Dr. Patel</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="class-slot">
+                                <div class="class-item">
+                                    <span class="subject-tag science">Chemistry</span>
+                                    <div class="class-details">
+                                        <small>Physical Chemistry</small>
+                                        <div class="class-meta">
+                                            <span><i class="fas fa-map-marker-alt"></i> Lab 1</span>
+                                            <span><i class="fas fa-user"></i> Ms. Reddy</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time-slot"><strong>10:30 - 11:30 AM</strong></td>
+                            <td class="break-slot">
+                                <div class="break-item">
+                                    <i class="fas fa-coffee"></i>
+                                    <span>Break</span>
+                                </div>
+                            </td>
+                            <td class="break-slot">
+                                <div class="break-item">
+                                    <i class="fas fa-coffee"></i>
+                                    <span>Break</span>
+                                </div>
+                            </td>
+                            <td class="break-slot">
+                                <div class="break-item">
+                                    <i class="fas fa-coffee"></i>
+                                    <span>Break</span>
+                                </div>
+                            </td>
+                            <td class="break-slot">
+                                <div class="break-item">
+                                    <i class="fas fa-coffee"></i>
+                                    <span>Break</span>
+                                </div>
+                            </td>
+                            <td class="break-slot">
+                                <div class="break-item">
+                                    <i class="fas fa-coffee"></i>
+                                    <span>Break</span>
+                                </div>
+                            </td>
+                            <td class="break-slot">
+                                <div class="break-item">
+                                    <i class="fas fa-coffee"></i>
+                                    <span>Break</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="lunch-break">
+                            <td class="time-slot"><strong>12:45 - 1:45 PM</strong></td>
+                            <td colspan="6" class="lunch-slot">
+                                <div class="lunch-item">
+                                    <i class="fas fa-utensils"></i>
+                                    <span>LUNCH BREAK</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time-slot"><strong>2:00 - 3:00 PM</strong></td>
+                            <td class="class-slot">
+                                <div class="class-item">
+                                    <span class="subject-tag history">History</span>
+                                    <div class="class-details">
+                                        <small>Indian Independence</small>
+                                        <div class="class-meta">
+                                            <span><i class="fas fa-map-marker-alt"></i> Room 301</span>
+                                            <span><i class="fas fa-user"></i> Mr. Singh</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="class-slot">
+                                <div class="class-item study-session">
+                                    <span class="subject-tag math">Study Group</span>
+                                    <div class="class-details">
+                                        <small>Math Problem Solving</small>
+                                        <div class="class-meta">
+                                            <span><i class="fas fa-video"></i> Virtual Room</span>
+                                            <span><i class="fas fa-users"></i> 5 Students</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="class-slot">
+                                <div class="class-item">
+                                    <span class="subject-tag history">History</span>
+                                    <div class="class-details">
+                                        <small>Medieval India</small>
+                                        <div class="class-meta">
+                                            <span><i class="fas fa-map-marker-alt"></i> Room 301</span>
+                                            <span><i class="fas fa-user"></i> Mr. Singh</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="class-slot">
+                                <div class="class-item">
+                                    <span class="subject-tag science">Physics</span>
+                                    <div class="class-details">
+                                        <small>Lab Work</small>
+                                        <div class="class-meta">
+                                            <span><i class="fas fa-flask"></i> Lab 2</span>
+                                            <span><i class="fas fa-user"></i> Dr. Patel</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="class-slot">
+                                <div class="class-item">
+                                    <span class="subject-tag history">History</span>
+                                    <div class="class-details">
+                                        <small>Modern India</small>
+                                        <div class="class-meta">
+                                            <span><i class="fas fa-map-marker-alt"></i> Room 301</span>
+                                            <span><i class="fas fa-user"></i> Mr. Singh</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="study-slot">
+                                <div class="study-item">
+                                    <i class="fas fa-book"></i>
+                                    <span>Study Hall</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time-slot"><strong>3:15 - 4:15 PM</strong></td>
+                            <td class="activity-slot pe">
+                                <div class="activity-item">
+                                    <i class="fas fa-dumbbell"></i>
+                                    <span>Physical Education</span>
+                                </div>
+                            </td>
+                            <td class="class-slot">
+                                <div class="class-item">
+                                    <span class="subject-tag science">Biology</span>
+                                    <div class="class-details">
+                                        <small>Lab Work</small>
+                                        <div class="class-meta">
+                                            <span><i class="fas fa-flask"></i> Lab 3</span>
+                                            <span><i class="fas fa-user"></i> Dr. Kumar</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="activity-slot art">
+                                <div class="activity-item">
+                                    <i class="fas fa-paint-brush"></i>
+                                    <span>Art & Craft</span>
+                                </div>
+                            </td>
+                            <td class="class-slot">
+                                <div class="class-item">
+                                    <span class="subject-tag history">Geography</span>
+                                    <div class="class-details">
+                                        <small>Climate Studies</small>
+                                        <div class="class-meta">
+                                            <span><i class="fas fa-map-marker-alt"></i> Room 302</span>
+                                            <span><i class="fas fa-user"></i> Ms. Gupta</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="activity-slot music">
+                                <div class="activity-item">
+                                    <i class="fas fa-music"></i>
+                                    <span>Music</span>
+                                </div>
+                            </td>
+                            <td class="study-slot">
+                                <div class="study-item">
+                                    <i class="fas fa-book-reader"></i>
+                                    <span>Library Period</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Additional Features -->
+            <div class="dashboard-grid" style="margin-top: 2rem;">
+                <!-- Quick Add Event -->
+                <div class="dashboard-card">
+                    <h3><i class="fas fa-plus"></i> Quick Add Event</h3>
+                    <form class="add-event-form">
+                        <div class="form-group">
+                            <label for="event-type">Event Type</label>
+                            <select id="event-type">
+                                <option>Class</option>
+                                <option>Study Session</option>
+                                <option>Assignment Due</option>
+                                <option>Exam</option>
+                                <option>Group Study</option>
+                                <option>Personal</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="event-subject">Subject/Title</label>
+                            <input type="text" id="event-subject" placeholder="e.g., Mathematics Quiz">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="event-date">Date</label>
+                                <input type="date" id="event-date">
+                            </div>
+                            <div class="form-group">
+                                <label for="event-time">Time</label>
+                                <input type="time" id="event-time">
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-plus"></i> Add to Schedule
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Upcoming Deadlines -->
+                <div class="dashboard-card">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Upcoming Deadlines</h3>
+                    <div class="deadlines-list">
+                        <div class="deadline-item urgent">
+                            <div class="deadline-icon">
+                                <i class="fas fa-exclamation"></i>
+                            </div>
+                            <div class="deadline-content">
+                                <h4>Physics Assignment</h4>
+                                <p>Wave Motion Problems</p>
+                                <span class="deadline-time">Due in 2 days</span>
+                            </div>
+                        </div>
+                        
+                        <div class="deadline-item warning">
+                            <div class="deadline-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="deadline-content">
+                                <h4>Math Test</h4>
+                                <p>Calculus & Integration</p>
+                                <span class="deadline-time">Due in 5 days</span>
+                            </div>
+                        </div>
+                        
+                        <div class="deadline-item normal">
+                            <div class="deadline-icon">
+                                <i class="fas fa-calendar"></i>
+                            </div>
+                            <div class="deadline-content">
+                                <h4>Chemistry Lab Report</h4>
+                                <p>Organic Reactions</p>
+                                <span class="deadline-time">Due in 1 week</span>
+                            </div>
+                        </div>
+                        
+                        <div class="deadline-item normal">
+                            <div class="deadline-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="deadline-content">
+                                <h4>English Essay</h4>
+                                <p>Shakespeare Analysis</p>
+                                <span class="deadline-time">Due in 10 days</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Study Statistics -->
+                <div class="dashboard-card">
+                    <h3><i class="fas fa-chart-bar"></i> This Week's Study Distribution</h3>
+                    <div class="study-distribution">
+                        <div class="subject-progress">
+                            <div class="subject-header">
+                                <span>Mathematics</span>
+                                <span class="hours">8.5h</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill math" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="subject-progress">
+                            <div class="subject-header">
+                                <span>Physics</span>
+                                <span class="hours">7.0h</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill science" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="subject-progress">
+                            <div class="subject-header">
+                                <span>Chemistry</span>
+                                <span class="hours">6.0h</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill science" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="subject-progress">
+                            <div class="subject-header">
+                                <span>Biology</span>
+                                <span class="hours">4.5h</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill science" style="width: 45%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="subject-progress">
+                            <div class="subject-header">
+                                <span>English</span>
+                                <span class="hours">3.0h</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill english" style="width: 30%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Smart Scheduling Tips -->
+                <div class="dashboard-card">
+                    <h3><i class="fas fa-lightbulb"></i> Smart Scheduling Tips</h3>
+                    <div class="tips-grid">
+                        <div class="tip-item">
+                            <div class="tip-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h4>Peak Hours</h4>
+                                <p>Schedule difficult subjects during your peak energy hours (usually morning)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-item">
+                            <div class="tip-icon">
+                                <i class="fas fa-repeat"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h4>Spaced Repetition</h4>
+                                <p>Review topics at increasing intervals for better long-term retention</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-item">
+                            <div class="tip-icon">
+                                <i class="fas fa-coffee"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h4>Regular Breaks</h4>
+                                <p>Take 5-10 minute breaks every hour to maintain focus and productivity</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-item">
+                            <div class="tip-icon">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h4>Subject Balance</h4>
+                                <p>Distribute study time evenly across subjects for balanced learning</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html> 

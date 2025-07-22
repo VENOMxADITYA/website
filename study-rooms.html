@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Rooms - EduLink</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>EduLink</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="study-rooms.html" class="nav-link active">Study Rooms</a></li>
+                <li><a href="buddies.html" class="nav-link">Find Buddies</a></li>
+                <li><a href="timetable.html" class="nav-link">Timetable</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Study Rooms Content -->
+    <main class="dashboard">
+        <div class="container">
+            <!-- Header -->
+            <div class="dashboard-header">
+                <h1><i class="fas fa-video"></i> Study Rooms</h1>
+                <p>Join collaborative study sessions with peers from across India. Choose from active rooms or create your own!</p>
+                <div class="room-filters">
+                    <button class="filter-btn active" data-filter="all">All Rooms</button>
+                    <button class="filter-btn" data-filter="math">Mathematics</button>
+                    <button class="filter-btn" data-filter="science">Science</button>
+                    <button class="filter-btn" data-filter="language">Languages</button>
+                    <button class="filter-btn" data-filter="cbse">CBSE</button>
+                </div>
+            </div>
+
+            <!-- Study Rooms Grid -->
+            <div class="rooms-grid">
+                <!-- Active Room 1 -->
+                <div class="room-card active-room" data-category="math cbse">
+                    <div class="room-header">
+                        <div class="room-title">
+                            <h3>Mathematics Focus Group</h3>
+                            <div class="room-level">
+                                <span class="level-badge advanced">Advanced</span>
+                            </div>
+                        </div>
+                        <div class="room-stats">
+                            <div class="participants">
+                                <span class="online-indicator"></span>
+                                <span>7/15 students</span>
+                            </div>
+                            <div class="room-board">CBSE Class 12</div>
+                        </div>
+                    </div>
+                    <div class="room-content">
+                        <div class="room-info">
+                            <div class="info-item">
+                                <i class="fas fa-book"></i>
+                                <span><strong>Topic:</strong> Calculus & Integration</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <span><strong>Started:</strong> 45 minutes ago</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-user"></i>
+                                <span><strong>Host:</strong> Aarav Sharma</span>
+                            </div>
+                        </div>
+                        <div class="room-features">
+                            <span class="feature-tag"><i class="fas fa-microphone"></i> Voice Chat</span>
+                            <span class="feature-tag"><i class="fas fa-chalkboard"></i> Whiteboard</span>
+                            <span class="feature-tag"><i class="fas fa-share-alt"></i> Screen Share</span>
+                        </div>
+                        <button class="btn btn-primary room-join-btn">
+                            <i class="fas fa-sign-in-alt"></i> Join Room
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Active Room 2 -->
+                <div class="room-card active-room" data-category="science cbse">
+                    <div class="room-header">
+                        <div class="room-title">
+                            <h3>Physics Problem Solving</h3>
+                            <div class="room-level">
+                                <span class="level-badge intermediate">Intermediate</span>
+                            </div>
+                        </div>
+                        <div class="room-stats">
+                            <div class="participants">
+                                <span class="online-indicator"></span>
+                                <span>12/20 students</span>
+                            </div>
+                            <div class="room-board">CBSE Class 11</div>
+                        </div>
+                    </div>
+                    <div class="room-content">
+                        <div class="room-info">
+                            <div class="info-item">
+                                <i class="fas fa-atom"></i>
+                                <span><strong>Topic:</strong> Mechanics & Motion</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <span><strong>Started:</strong> 1 hour ago</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-user"></i>
+                                <span><strong>Host:</strong> Priya Patel</span>
+                            </div>
+                        </div>
+                        <div class="room-features">
+                            <span class="feature-tag"><i class="fas fa-video"></i> Video Chat</span>
+                            <span class="feature-tag"><i class="fas fa-file-alt"></i> Notes Sharing</span>
+                            <span class="feature-tag"><i class="fas fa-calculator"></i> Calculator</span>
+                        </div>
+                        <button class="btn btn-primary room-join-btn">
+                            <i class="fas fa-sign-in-alt"></i> Join Room
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Active Room 3 -->
+                <div class="room-card active-room" data-category="science icse">
+                    <div class="room-header">
+                        <div class="room-title">
+                            <h3>Chemistry Study Circle</h3>
+                            <div class="room-level">
+                                <span class="level-badge beginner">Beginner</span>
+                            </div>
+                        </div>
+                        <div class="room-stats">
+                            <div class="participants">
+                                <span class="online-indicator"></span>
+                                <span>5/12 students</span>
+                            </div>
+                            <div class="room-board">ICSE Class 10</div>
+                        </div>
+                    </div>
+                    <div class="room-content">
+                        <div class="room-info">
+                            <div class="info-item">
+                                <i class="fas fa-flask"></i>
+                                <span><strong>Topic:</strong> Organic Chemistry</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <span><strong>Started:</strong> 20 minutes ago</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-user"></i>
+                                <span><strong>Host:</strong> Sneha Reddy</span>
+                            </div>
+                        </div>
+                        <div class="room-features">
+                            <span class="feature-tag"><i class="fas fa-comments"></i> Text Chat</span>
+                            <span class="feature-tag"><i class="fas fa-sticky-note"></i> Study Notes</span>
+                            <span class="feature-tag"><i class="fas fa-question-circle"></i> Q&A</span>
+                        </div>
+                        <button class="btn btn-primary room-join-btn">
+                            <i class="fas fa-sign-in-alt"></i> Join Room
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Create New Room Card -->
+                <div class="room-card create-room-card">
+                    <div class="create-room-content">
+                        <div class="create-icon">
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
+                        <h3>Create New Room</h3>
+                        <p>Start your own study session and invite others to collaborate!</p>
+                        <button class="btn btn-secondary" onclick="openCreateRoomModal()">
+                            <i class="fas fa-plus"></i> Create Room
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Scheduled Room -->
+                <div class="room-card scheduled-room" data-category="science">
+                    <div class="room-header scheduled">
+                        <div class="room-title">
+                            <h3>Biology Exam Prep</h3>
+                            <div class="room-level">
+                                <span class="level-badge neet">NEET Prep</span>
+                            </div>
+                        </div>
+                        <div class="room-stats">
+                            <div class="participants">
+                                <i class="fas fa-clock"></i>
+                                <span>Starts in 2h 15m</span>
+                            </div>
+                            <div class="room-board">NEET Aspirants</div>
+                        </div>
+                    </div>
+                    <div class="room-content">
+                        <div class="room-info">
+                            <div class="info-item">
+                                <i class="fas fa-microscope"></i>
+                                <span><strong>Topic:</strong> Human Physiology</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-users"></i>
+                                <span><strong>Expected:</strong> 15+ students</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-user"></i>
+                                <span><strong>Host:</strong> Dr. Rajesh Kumar</span>
+                            </div>
+                        </div>
+                        <div class="room-features">
+                            <span class="feature-tag"><i class="fas fa-video"></i> Live Session</span>
+                            <span class="feature-tag"><i class="fas fa-question-circle"></i> Q&A</span>
+                            <span class="feature-tag"><i class="fas fa-download"></i> Resources</span>
+                        </div>
+                        <button class="btn btn-secondary room-remind-btn">
+                            <i class="fas fa-bell"></i> Set Reminder
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Language Study Room -->
+                <div class="room-card active-room" data-category="language state">
+                    <div class="room-header">
+                        <div class="room-title">
+                            <h3>English Literature Discussion</h3>
+                            <div class="room-level">
+                                <span class="level-badge intermediate">Intermediate</span>
+                            </div>
+                        </div>
+                        <div class="room-stats">
+                            <div class="participants">
+                                <span class="online-indicator"></span>
+                                <span>8/15 students</span>
+                            </div>
+                            <div class="room-board">State Board Class 12</div>
+                        </div>
+                    </div>
+                    <div class="room-content">
+                        <div class="room-info">
+                            <div class="info-item">
+                                <i class="fas fa-book-open"></i>
+                                <span><strong>Topic:</strong> Shakespeare's Macbeth</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <span><strong>Started:</strong> 30 minutes ago</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-user"></i>
+                                <span><strong>Host:</strong> Meera Joshi</span>
+                            </div>
+                        </div>
+                        <div class="room-features">
+                            <span class="feature-tag"><i class="fas fa-comments"></i> Discussion</span>
+                            <span class="feature-tag"><i class="fas fa-book"></i> Reading Group</span>
+                            <span class="feature-tag"><i class="fas fa-pen-fancy"></i> Essay Writing</span>
+                        </div>
+                        <button class="btn btn-primary room-join-btn">
+                            <i class="fas fa-sign-in-alt"></i> Join Room
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Room Features Section -->
+            <div class="features-showcase">
+                <div class="section-header">
+                    <h2>Study Room Features</h2>
+                    <p>Everything you need for effective collaborative learning</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3>HD Video Conferencing</h3>
+                        <p>Crystal clear video calls with up to 20 participants, perfect for group discussions and presentations</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chalkboard"></i>
+                        </div>
+                        <h3>Interactive Whiteboard</h3>
+                        <p>Collaborative digital whiteboard for solving problems, drawing diagrams, and explaining concepts together</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <h3>Screen Sharing</h3>
+                        <p>Share your screen to explain solutions, present materials, or work through problems step by step</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-file-upload"></i>
+                        </div>
+                        <h3>File Sharing</h3>
+                        <p>Upload and share study materials, PDFs, notes, and assignments instantly with all participants</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-stopwatch"></i>
+                        </div>
+                        <h3>Study Timers</h3>
+                        <p>Built-in Pomodoro timers and study session management to maintain focus and productivity</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Safe Environment</h3>
+                        <p>AI-powered moderation and safety features ensure a secure and respectful learning environment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Create Room Modal -->
+    <div id="createRoomModal" class="modal-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h3><i class="fas fa-plus-circle"></i> Create New Study Room</h3>
+                <button class="modal-close" onclick="closeCreateRoomModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form class="create-room-form">
+                <div class="form-group">
+                    <label for="roomName">Room Name</label>
+                    <input type="text" id="roomName" placeholder="e.g., Physics Problem Solving">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject">
+                            <option value="mathematics">Mathematics</option>
+                            <option value="physics">Physics</option>
+                            <option value="chemistry">Chemistry</option>
+                            <option value="biology">Biology</option>
+                            <option value="english">English</option>
+                            <option value="history">History</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="board">Educational Board</label>
+                        <select id="board">
+                            <option value="cbse">CBSE</option>
+                            <option value="icse">ICSE</option>
+                            <option value="state">State Board</option>
+                            <option value="ib">IB</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="class">Class/Grade</label>
+                        <select id="class">
+                            <option value="9">Class 9</option>
+                            <option value="10">Class 10</option>
+                            <option value="11">Class 11</option>
+                            <option value="12">Class 12</option>
+                            <option value="ug">Undergraduate</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="maxParticipants">Max Participants</label>
+                        <select id="maxParticipants">
+                            <option value="5">5 students</option>
+                            <option value="10">10 students</option>
+                            <option value="15">15 students</option>
+                            <option value="20">20 students</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="description">Description (Optional)</label>
+                    <textarea id="description" rows="3" placeholder="Describe what you'll be studying..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Room Features</label>
+                    <div class="feature-checkboxes">
+                        <label class="checkbox-label">
+                            <input type="checkbox" checked> Video Chat
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" checked> Whiteboard
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox"> Screen Sharing
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox"> File Sharing
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeCreateRoomModal()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Create Room
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
