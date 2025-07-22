@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLink - Study Together, Succeed Together</title>
+    <link rel="stylesheet" href="styles.css?v=2">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>EduLink</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="study-rooms.html" class="nav-link">Study Rooms</a></li>
+                <li><a href="buddies.html" class="nav-link">Find Buddies</a></li>
+                <li><a href="timetable.html" class="nav-link">Timetable</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Study Together, <span class="highlight">Succeed Together</span></h1>
+                <p>Connect with study buddies, manage your schedule, and boost your productivity with EduLink - India's premier collaborative learning platform for students.</p>
+                <div class="hero-buttons">
+                    <a href="dashboard.html" class="btn btn-primary">Get Started</a>
+                    <a href="#features" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">10,000+</div>
+                        <div class="stat-label">Active Students</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Study Rooms</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">50,000+</div>
+                        <div class="stat-label">Study Hours</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="study-illustration">
+                    <div class="floating-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="floating-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="floating-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="floating-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Everything You Need to Excel</h2>
+                <p>Comprehensive tools designed specifically for Indian students</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Smart Timetable</h3>
+                    <p>Organize your study schedule with our intelligent timetable system tailored for CBSE, ICSE, and State boards</p>
+                    <div class="feature-tags">
+                        <span class="tag">Schedule</span>
+                        <span class="tag">Reminders</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Study Buddies</h3>
+                    <p>Connect with compatible study partners based on subjects, boards, and learning preferences</p>
+                    <div class="feature-tags">
+                        <span class="tag">Matching</span>
+                        <span class="tag">Collaboration</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Focus Rooms</h3>
+                    <p>Join virtual study rooms with video chat, whiteboard, and collaborative problem-solving tools</p>
+                    <div class="feature-tags">
+                        <span class="tag">Video Chat</span>
+                        <span class="tag">Whiteboard</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Task Management</h3>
+                    <p>Keep track of assignments, deadlines, and study goals with smart reminders and progress tracking</p>
+                    <div class="feature-tags">
+                        <span class="tag">To-Do</span>
+                        <span class="tag">Deadlines</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-stopwatch"></i>
+                    </div>
+                    <h3>Study Timers</h3>
+                    <p>Boost productivity with Pomodoro timers, focus sessions, and study break recommendations</p>
+                    <div class="feature-tags">
+                        <span class="tag">Pomodoro</span>
+                        <span class="tag">Focus</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Progress Tracking</h3>
+                    <p>Monitor your study habits and productivity with detailed analytics and AI-powered insights</p>
+                    <div class="feature-tags">
+                        <span class="tag">Analytics</span>
+                        <span class="tag">AI Insights</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <div class="benefits-content">
+                <div class="benefits-text">
+                    <h2>Why Choose EduLink?</h2>
+                    <div class="benefit-list">
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Made for Indian Students</h4>
+                                <p>Designed specifically for CBSE, ICSE, State Boards, and competitive exam preparation</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Safe & Secure</h4>
+                                <p>AI-powered moderation and safety features to ensure a secure learning environment</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>24/7 Availability</h4>
+                                <p>Study anytime with round-the-clock access to rooms and resources</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Collaborative Learning</h4>
+                                <p>Learn better together with peer-to-peer support and group study sessions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="benefits-visual">
+                    <div class="stats-card">
+                        <h3>Impact Statistics</h3>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <span class="stat-value">95%</span>
+                                <span class="stat-desc">Improved Grades</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">80%</span>
+                                <span class="stat-desc">Better Focus</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">70%</span>
+                                <span class="stat-desc">Reduced Stress</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">90%</span>
+                                <span class="stat-desc">More Motivated</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <div class="container">
+            <div class="quote-card">
+                <i class="fas fa-quote-left"></i>
+                <p id="motivational-quote">"Education is the most powerful weapon which you can use to change the world."</p>
+                <span>- Nelson Mandela</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Study Experience?</h2>
+                <p>Join thousands of students who are already studying smarter, not harder</p>
+                <div class="cta-buttons">
+                    <a href="dashboard.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-rocket"></i>
+                        Start Your Journey
+                    </a>
+                    <a href="study-rooms.html" class="btn btn-secondary btn-large">
+                        <i class="fas fa-video"></i>
+                        Explore Rooms
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="script.js?v=2"></script>
+</body>
+</html> 
